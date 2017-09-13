@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABCD Firebase Study</title>
+
+  <script defer src="/__/firebase/4.3.1/firebase.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+</head>
+
+<body class="container">
+
+  <div class="form-group">
+
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input id="age" type="text" value="" class="form-control" name="custom_name" placeholder="age">
+      </span>
+      <span class="input-group-addon">
+        <input id="name" type="text" value="" class="form-control" name="custom_name" placeholder="name">
+      </span>
+      <span class="input-group-addon">
+        <button id="add" class="add btn btn-primary" type="button">Add</button>
+      </span>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input id="key" type="text" value="" class="form-control" name="custom_name" placeholder="object-key">
+      </span>
+      <span class="input-group-addon">
+        <button id="del" class="add btn btn-danger" type="button">Delete</button>
+      </span>
+
+      <span class="input-group-addon">
+        <button id="search" class="add btn btn-info" type="button">Search</button>
+      </span>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">
+        <button id="update" class="add btn btn-warning" type="button">Update</button>
+      </span>
+    </div>
+      
+
+  </div>
+
+  <h2>Realtime Database</h2>
+
+  <h3>value</h3>
+  <pre id="objValue"></pre>
+
+  <h3>Added</h3>
+  <pre id="objAdded"></pre>
+
+  <h3>Changed</h3>
+  <pre id="objChanged"></pre>
+
+  <h3>Removed</h3>
+  <pre id="objRemoved"></pre>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
