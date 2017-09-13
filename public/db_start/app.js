@@ -1,3 +1,5 @@
+// TODO : rule change anonymous!!
+
 (function () {
 
     const txtAge = document.getElementById('age');
@@ -6,6 +8,7 @@
 
     btnAdd.addEventListener('click', e => {
         console.log('btnAdd - click');
+        //  DB - push
     });
 
 
@@ -21,6 +24,8 @@
             return;
         }
 
+        //  DB - delete
+
     });
 
 
@@ -31,6 +36,7 @@
     btnSearch.addEventListener('click', e => {
         console.log('btnSearch - click');
 
+        //  DB - once
     });
 
 
@@ -42,6 +48,7 @@
     btnUpdate.addEventListener('click', e => {
         console.log('btnUpdate - click');
 
+        //  DB - update
     });
 
 
@@ -57,22 +64,25 @@
 
         const dbObjectRef = firebase.database().ref('object');
 
-        // TODO : rule change anonymous!!
+        //  DB - value
         dbObjectRef.on('value', snap => {
             console.log(snap);
             objValue.innerText = JSON.stringify(snap.val(), null, 3);
         });
 
+        //  DB - child_added
         dbObjectRef.on('child_added', snap => {
             console.log(snap);
             objAdded.innerText = JSON.stringify(snap.val(), null, 3);
         });
 
+        //  DB - child_changed
         dbObjectRef.on('child_changed', snap => {
             console.log(snap);
             objChanged.innerText = JSON.stringify(snap.val(), null, 3);
         });
 
+        //  DB - child_removed
         dbObjectRef.on('child_removed', snap => {
             console.log(snap);
             objRemoved.innerText = JSON.stringify(snap.val(), null, 3);
